@@ -1,6 +1,4 @@
 import React, { useState } from 'react';
-import AnalysisForm from './components/AnalysisForm';
-import AnalysisResults from './components/AnalysisResults';
 import { scanTarget } from './services/api';
 import { ShieldCheck, AlertCircle } from 'lucide-react';
 
@@ -67,12 +65,7 @@ function App() {
 
         {/* Input Section - always visible, but maybe simpler state if results exist? 
             For now, keep it visible so they can rescan easily. */}
-        <AnalysisForm onScan={handleScan} isLoading={isLoading} />
-
-        {/* Results Section */}
-        {scanData && (
-          <AnalysisResults results={scanData} />
-        )}
+        
       </main>
 
       <footer style={{
